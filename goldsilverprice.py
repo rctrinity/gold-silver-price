@@ -38,6 +38,7 @@ if (__name__ == '__main__'):
         logger.info('Unable to retrieve SILVER price')
 
     #BTC
+    logger.info('Collecting data from CoinDesk...')
     url = requests.get(pkg.BtcURL)
     btc_json = url.text
     btc = json.loads(btc_json)
