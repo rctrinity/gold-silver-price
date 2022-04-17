@@ -1,3 +1,5 @@
+# Gold Silver Price Python script v1.0.1
+#  2022-04-17
 if (__name__ == '__main__'):
     
     import pkg
@@ -6,11 +8,10 @@ if (__name__ == '__main__'):
     import logging
     
     now = datetime.datetime.now()
-    FORMAT = '%(asctime)-15s- %(levelname)s - %(name)s -%(message)s'
+    FORMAT = '[%(asctime)-15s] - [%(levelname)s] - %(message)s'
     logging.basicConfig(format=FORMAT, level=logging.INFO)
     logger = logging.getLogger(__name__)
 
-    #logger.info('Current Date and Time: ' + str(now))
     logger.info('Collecting data from Forex...')
 
     #gold
