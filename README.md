@@ -7,7 +7,8 @@
 ###### I hope you find it useful if deciding to use and/or modify. 
 
 ###### Output:
-<img width="540" alt="Screen Shot 2022-04-17 at 5 50 44 PM" src="https://user-images.githubusercontent.com/103879453/163735142-a67b02a7-b058-4dfa-b4fb-e54140e32f39.png">
+<img width="526" alt="Screen Shot 2022-04-17 at 6 01 59 PM" src="https://user-images.githubusercontent.com/103879453/163735375-82983dbe-7cc3-49c9-9aec-bf51a59c98f4.png">
+
 
 
 ###### Thanks,
