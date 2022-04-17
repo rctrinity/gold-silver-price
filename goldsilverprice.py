@@ -23,7 +23,7 @@ if (__name__ == '__main__'):
         for k in forex:
 	        if k['topo']['platform'] == 'MT5':
 		        logger.info('GOLD  :   $'+format(k['spreadProfilePrices'][0]['ask'], ',.2f'))
-    except GoldExportError:
+    except:
         logger.info('Unable to retrieve GOLD price')
 
     #silver
