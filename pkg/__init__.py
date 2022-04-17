@@ -14,6 +14,7 @@ class Color:
     YELLOW = "\033[93m"
     SILVER = "\033[37m"
     RED = "\033[91m"
+    ORANGE = "\033[33m"
     BOLD_WHITE = BOLD + WHITE
     BOLD_BLUE = BOLD + BLUE
     BOLD_GREEN = BOLD + GREEN
