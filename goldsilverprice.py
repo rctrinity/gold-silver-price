@@ -24,7 +24,7 @@ if (__name__ == '__main__'):
     try:
         for k in forex:
 	        if k['topo']['platform'] == 'MT5':
-		        logger.info('GOLD    : $'+format(k['spreadProfilePrices'][0]['ask'], ',.2f'), extra={'prefix': Color.YELLOW, 'suffix': Color.END})
+		        logger.info('GOLD    :  $'+format(k['spreadProfilePrices'][0]['ask'], ',.2f'), extra={'prefix': Color.YELLOW, 'suffix': Color.END})
     except:
         logger.info('Unable to retrieve GOLD price', extra={'prefix': Color.RED, 'suffix': Color.END})
 
@@ -35,7 +35,7 @@ if (__name__ == '__main__'):
     try:
         for k in forex:
 	        if k['topo']['platform'] == 'MT5':
-		        logger.info('SILVER  :    $'+format(k['spreadProfilePrices'][0]['ask'], ',.2f'), extra={'prefix': Color.SILVER, 'suffix': Color.END})
+		        logger.info('SILVER  :     $'+format(k['spreadProfilePrices'][0]['ask'], ',.2f'), extra={'prefix': Color.SILVER, 'suffix': Color.END})
     except:
         logger.info('Unable to retrieve SILVER price', extra={'prefix': Color.RED, 'suffix': Color.END})
 
@@ -47,8 +47,8 @@ if (__name__ == '__main__'):
     try:
         btc_f = float(btc['bpi']['USD']['rate'].replace(',',''))
         satusd = (1/(btc_f * 0.00000001))
-        logger.info('BITCOIN :$'+format(btc_f, ',.2f'), extra={'prefix': Color.ORANGE, 'suffix': Color.END})
-        logger.info('SATs/USD:     '+format(satusd, ',.0f'), extra={'prefix': Color.ORANGE, 'suffix': Color.END})
+        logger.info('BITCOIN : $'+format(btc_f, ',.2f'), extra={'prefix': Color.ORANGE, 'suffix': Color.END})
+        logger.info('SATs/USD:      '+format(satusd, ',.0f'), extra={'prefix': Color.ORANGE, 'suffix': Color.END})
     except:
         logger.info('Unable to retrieve BTC price', extra={'prefix': Color.RED, 'suffix': Color.END})
 
