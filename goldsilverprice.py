@@ -1,4 +1,5 @@
 # Gold Silver Price Python script v1.0.1
+# RC Trinity
 #  2022-04-17
 if (__name__ == '__main__'):
     
@@ -9,7 +10,7 @@ if (__name__ == '__main__'):
     
     now = datetime.datetime.now()
     FORMAT = '[%(asctime)-15s] - [%(levelname)s] - %(message)s'
-    logging.basicConfig(format=FORMAT, level=logging.INFO)
+    logging.basicConfig(format=FORMAT, level=logging.INFO, datefmt='%Y-%m-%d %H:%M:%S')
     logger = logging.getLogger(__name__)
 
     logger.info('Collecting data from Forex...')
