@@ -22,7 +22,7 @@ if (__name__ == '__main__'):
     try:
         for k in forex:
 	        if k['topo']['platform'] == 'MT5':
-		        logger.info('GOLD  :   $'+format(k['spreadProfilePrices'][0]['ask'], ',.2f'))
+		        logger.info('GOLD    : $'+format(k['spreadProfilePrices'][0]['ask'], ',.2f'))
     except:
         logger.info('Unable to retrieve GOLD price')
 
@@ -33,7 +33,7 @@ if (__name__ == '__main__'):
     try:
         for k in forex:
 	        if k['topo']['platform'] == 'MT5':
-		        logger.info('SILVER:      $'+format(k['spreadProfilePrices'][0]['ask'], ',.2f'))
+		        logger.info('SILVER  :    $'+format(k['spreadProfilePrices'][0]['ask'], ',.2f'))
     except:
         logger.info('Unable to retrieve SILVER price')
 
@@ -45,7 +45,7 @@ if (__name__ == '__main__'):
     btc_f = float(btc['bpi']['USD']['rate'].replace(',',''))
     satusd = (1/(btc_f * 0.00000001))
     try:
-        logger.info('BITCOIN: $'+format(btc_f, ',.2f'))
+        logger.info('BITCOIN :$'+format(btc_f, ',.2f'))
         logger.info('SATs/USD:     '+format(satusd, ',.0f'))
     except:
         logger.info('Unable to retrieve BTC price')
