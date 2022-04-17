@@ -7,7 +7,6 @@ if (__name__ == '__main__'):
     from pkg import *
     import json, requests
     import datetime
-    import logging
     
     now = datetime.datetime.now()
     logger = logging.getLogger(__name__)
