@@ -42,9 +42,9 @@ if (__name__ == '__main__'):
     url = requests.get(pkg.BtcURL)
     btc_json = url.text
     btc = json.loads(btc_json)
-    btc_f = float(btc['bpi']['USD']['rate'].replace(',',''))
-    satusd = (1/(btc_f * 0.00000001))
     try:
+        btc_f = float(btc['bpi']['USD']['rate'].replace(',',''))
+        satusd = (1/(btc_f * 0.00000001))
         logger.info('BITCOIN :$'+format(btc_f, ',.2f'))
         logger.info('SATs/USD:     '+format(satusd, ',.0f'))
     except:
