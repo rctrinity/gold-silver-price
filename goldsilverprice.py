@@ -45,7 +45,7 @@ if (__name__ == '__main__'):
     satusd = (1/(btc_f * 0.00000001))
     try:
         logger.info('BITCOIN: $'+format(btc_f, ',.2f'))
-        logger.info('SATs/USD:      '+format(satusd, '.0f'))
+        logger.info('SATs/USD:      '+format(satusd, ',.0f'))
     except:
         logger.info('Unable to retrieve BTC price')
 
