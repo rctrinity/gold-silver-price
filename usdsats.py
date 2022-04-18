@@ -20,7 +20,7 @@ if (__name__ == '__main__'):
         dollarmt = sys.argv[1]
         dollaramt_f = float(dollarmt.replace(',',''))
     except:
-        logger.info('Usage: usdsats.py ##.##', extra={'prefix': Color.RED, 'suffix': Color.END})
+        logger.error('Usage: usdsats.py ##.##', extra={'prefix': Color.RED, 'suffix': Color.END})
         quit()
     #BTC
     logger.info('Collecting data from CoinDesk...')
