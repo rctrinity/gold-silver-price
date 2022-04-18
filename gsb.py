@@ -51,7 +51,11 @@ if (__name__ == '__main__'):
         logger.info('   SATs/USD:   '+format(satusd, ',.0f'))
     except:
         logger.error('Unable to retrieve BTC price', extra={'prefix': Color.RED, 'suffix': Color.END})
+<<<<<<< HEAD
     
+=======
+	
+>>>>>>> 0adf547ae5bcefb9460b1e05e165fbe97aca8e82
     logging.shutdown()
 
 quit()
