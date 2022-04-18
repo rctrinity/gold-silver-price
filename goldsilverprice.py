@@ -54,7 +54,7 @@ if (__name__ == '__main__'):
         #logger.info('BITCOIN : $'+format(btc_f, ',.2f'), extra={'prefix': Color.ORANGE, 'suffix': Color.END})
         logger.info('BITCOIN : $'+format(btc_f, ',.2f'))
         #logger.info('SATs/USD:      '+format(satusd, ',.0f'), extra={'prefix': Color.ORANGE, 'suffix': Color.END})
-        logger.info('SATs/USD:      '+format(satusd, ',.0f'))
+        logger.info('   SATs/USD:   '+format(satusd, ',.0f'))
     except:
         logger.info('Unable to retrieve BTC price', extra={'prefix': Color.RED, 'suffix': Color.END})
 
