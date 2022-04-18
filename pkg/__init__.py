@@ -27,9 +27,9 @@ class Color:
 class ColorLogFormatter(logging.Formatter):
     """A class for formatting colored logs."""
 
-    #FORMAT = '%(prefix)s%(levelname)s [%(asctime)-15s] %(message)s%(suffix)s'
     FORMAT = '%(prefix)s%(levelname)s%(suffix)s [%(asctime)-15s] %(prefix)s%(message)s%(suffix)s'
-
+    #DATEFMT = '%Y-%m-%d %I:%M:%S %p'
+    
     LOG_LEVEL_COLOR = {
         "DEBUG": {'prefix': '', 'suffix': ''},
         "INFO": {'prefix': Color.GREEN, 'suffix': Color.END},
@@ -46,5 +46,5 @@ class ColorLogFormatter(logging.Formatter):
         if not hasattr(record, 'suffix'):
             record.suffix = self.LOG_LEVEL_COLOR.get(record.levelname.upper()).get('suffix')
 
-        formatter = logging.Formatter(self.FORMAT)
+        formatter = logging.Formatter(self.FORMAT, datefmt='%Y-%m-%d %I:%M:%S %p')
         return formatter.format(record)
