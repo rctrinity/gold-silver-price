@@ -33,6 +33,6 @@ if (__name__ == '__main__'):
         result = (dollaramt_f*satusd)
         logger.info('$'+format(dollaramt_f, ',.2f')+' = '+format(result, ',.0f')+' satoshis')
     except:
-        logger.info('Usage: usdsats.py ##.##', extra={'prefix': Color.RED, 'suffix': Color.END})
+        logger.info('Error retrieving Bitcoin data', extra={'prefix': Color.RED, 'suffix': Color.END})
 
 quit()
