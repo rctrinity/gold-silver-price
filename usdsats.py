@@ -21,6 +21,7 @@ if (__name__ == '__main__'):
         dollaramt_f = float(dollarmt.replace(',',''))
     except:
         logger.error('Usage: usdsats.py ##.##', extra={'prefix': Color.RED, 'suffix': Color.END})
+        logging.shutdown()
         quit()
     #BTC
     logger.info('Collecting data from CoinDesk...')
@@ -34,5 +35,7 @@ if (__name__ == '__main__'):
         logger.info('$'+format(dollaramt_f, ',.2f')+' = '+format(result, ',.0f')+' satoshis')
     except:
         logger.error('Error retrieving Bitcoin data', extra={'prefix': Color.RED, 'suffix': Color.END})
+        
+    logging.shutdown()
 
 quit()
