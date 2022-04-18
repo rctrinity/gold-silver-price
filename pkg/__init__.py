@@ -20,17 +20,19 @@ class Color:
     BOLD_GREEN = BOLD + GREEN
     BOLD_YELLOW = BOLD + YELLOW
     BOLD_RED = BOLD + RED
+    BOLD_ORANGE = BOLD + ORANGE
     END = "\033[0m"
 
 
 class ColorLogFormatter(logging.Formatter):
     """A class for formatting colored logs."""
 
-    FORMAT = '%(prefix)s%(levelname)s [%(asctime)-15s] %(message)s%(suffix)s'
+    #FORMAT = '%(prefix)s%(levelname)s [%(asctime)-15s] %(message)s%(suffix)s'
+    FORMAT = '%(prefix)s%(levelname)s%(suffix)s [%(asctime)-15s] %(prefix)s%(message)s%(suffix)s'
 
     LOG_LEVEL_COLOR = {
         "DEBUG": {'prefix': '', 'suffix': ''},
-        "INFO": {'prefix': '', 'suffix': ''},
+        "INFO": {'prefix': Color.GREEN, 'suffix': Color.END},
         "WARNING": {'prefix': Color.BOLD_YELLOW, 'suffix': Color.END},
         "ERROR": {'prefix': Color.BOLD_RED, 'suffix': Color.END},
         "CRITICAL": {'prefix': Color.BOLD_RED, 'suffix': Color.END},
