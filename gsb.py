@@ -8,13 +8,13 @@ if (__name__ == '__main__'):
     import json, requests
     import datetime
     
-    now = datetime.datetime.now()
+    
     logger = logging.getLogger(__name__)
-    logger.setLevel('INFO')
+    logger.setLevel('INFO')  
     stream_handler = logging.StreamHandler()
     stream_handler.setFormatter(ColorLogFormatter())
     logger.addHandler(stream_handler)
-
+    
     logger.info('Collecting data from Forex...')
 
     #gold
@@ -51,5 +51,7 @@ if (__name__ == '__main__'):
         logger.info('   SATs/USD:   '+format(satusd, ',.0f'))
     except:
         logger.error('Unable to retrieve BTC price', extra={'prefix': Color.RED, 'suffix': Color.END})
+    
+    logging.shutdown()
 
 quit()

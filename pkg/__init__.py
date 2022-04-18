@@ -28,7 +28,6 @@ class ColorLogFormatter(logging.Formatter):
     """A class for formatting colored logs."""
 
     FORMAT = '%(prefix)s%(levelname)s%(suffix)s [%(asctime)-15s] %(prefix)s%(message)s%(suffix)s'
-    #DATEFMT = '%Y-%m-%d %I:%M:%S %p'
     
     LOG_LEVEL_COLOR = {
         "DEBUG": {'prefix': '', 'suffix': ''},
