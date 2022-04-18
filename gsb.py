@@ -26,7 +26,7 @@ if (__name__ == '__main__'):
 	        if k['topo']['platform'] == 'MT5':
 		        logger.info('GOLD    :  $'+format(k['spreadProfilePrices'][0]['ask'], ',.2f'))
     except:
-        logger.info('Unable to retrieve GOLD price', extra={'prefix': Color.RED, 'suffix': Color.END})
+        logger.error('Unable to retrieve GOLD price', extra={'prefix': Color.RED, 'suffix': Color.END})
 
     #silver
     url = requests.get(pkg.SilverForexURL)
@@ -37,7 +37,7 @@ if (__name__ == '__main__'):
 	        if k['topo']['platform'] == 'MT5':
 		        logger.info('SILVER  :     $'+format(k['spreadProfilePrices'][0]['ask'], ',.2f'))
     except:
-        logger.info('Unable to retrieve SILVER price', extra={'prefix': Color.RED, 'suffix': Color.END})
+        logger.error('Unable to retrieve SILVER price', extra={'prefix': Color.RED, 'suffix': Color.END})
 
     #BTC
     logger.info('Collecting data from CoinDesk...')
@@ -50,6 +50,6 @@ if (__name__ == '__main__'):
         logger.info('BITCOIN : $'+format(btc_f, ',.2f'))
         logger.info('   SATs/USD:   '+format(satusd, ',.0f'))
     except:
-        logger.info('Unable to retrieve BTC price', extra={'prefix': Color.RED, 'suffix': Color.END})
+        logger.error('Unable to retrieve BTC price', extra={'prefix': Color.RED, 'suffix': Color.END})
 
 quit()
